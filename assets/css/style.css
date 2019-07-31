@@ -909,8 +909,13 @@ blockquote {
   border-bottom: 1px solid rgba(226,226,226,1);
 }
 
+#logo {
+  max-height: 4rem;
+}
+
 /* Site-logo */
 .site-title {
+  position: relative;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 30px;
