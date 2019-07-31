@@ -92,6 +92,31 @@ input[type=search] + button:focus {
   border: 1px solid #f9f8f8;
 }
 
+.beige {
+  background-color: #f9f8f8;
+}
+
+.vd-bg {
+  background-color: rgba(11, 184, 103, 0.81);
+  margin: 0;
+  width: 100%;
+  padding: 35px 50px 25px 50px;
+}
+
+.blk {
+  color: #292a2c;
+  font-weight: 400;
+}
+
+.blk span {
+  color: #ffffff;
+}
+
+.blk .bld {
+  font-weight: 800;
+  line-height: 6rem;
+}
+
 .checkbox [type="checkbox"]:not(:checked) + label:after,
 .checkbox [type="checkbox"]:checked + label:after {
   color: #0BB868;;
