@@ -394,11 +394,31 @@ let curtext = 0;
 
 let multiTextChange = setInterval(function() {
   multiText.textContent = multiTextCont[curtext];
-  console.log(multiText.classList)
   multiText.classList.add("multi-text-change");
   if (curtext < multiTextCont.length -1) {
     curtext++
   } else {
     curtext = 0;
   }
-},2000)
+},2000);
+
+let menu = document.getElementById("nav-bar");
+let menuItemList = document.getElementsByClassName("menu-item");
+
+
+menu.addEventListener("click", () => {
+  Array.from(menuItemList).forEach(element => {
+    element.classList.remove("active")
+  });
+});
+
+Array.from(menuItemList).forEach(element => {
+  element.addEventListener("click", () => {
+    setTimeout(() => {
+      if ( element.attributes["data-name"].nodeValue === window.location.href.match(/#.*/)[0]) {
+        console.log(window.location.href.match(/#.*/))
+        element.classList.add("active")
+      }
+    }, 200)
+  })
+});
